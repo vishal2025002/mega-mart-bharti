@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Vishal Mega Mart Security Guard Bharti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Base & Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: linear-gradient(-45deg, #e5007e, #ff6f61, #3a86ff, #8338ec);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px 40px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    header .logo {
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: white;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(229,0,126,0.9);
+      cursor: default;
+      user-select: none;
+      flex: 1 1 200px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex: 2 1 400px;
+    }
+    nav ul li {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      display: inline-block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: rgba(229,0,126,0.8);
+      box-shadow: 0 0 8px rgba(229,0,126,0.9);
+      color: white;
+    }
+
+    /* MARQUEE */
+    .marquee-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      user-select: none;
+    }
+
+    /* MAIN CONTENT */
+    h1 {
+      color: white;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(229, 0, 126, 0.7);
+      user-select: none;
+      max-width: 100%;
+      padding: 0 10px;
+    }
+    section.contact-container {
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      max-width: 600px;
+      width: 100%;
+      padding: 30px 40px;
+      box-sizing: border-box;
+    }
+    h2 {
+      color: #e5007e;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      text-align: center;
+      user-select: none;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form label {
+      margin: 12px 0 6px;
+      font-weight: 700;
+      color: #555;
+      user-select: none;
+    }
+    form input, form textarea {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+      font-family: inherit;
+    }
+    form input:focus, form textarea:focus {
+      border-color: #e5007e;
+      outline: none;
+      box-shadow: 0 0 6px rgba(229,0,126,0.5);
+    }
+    form textarea {
+      min-height: 100px;
+    }
+    form button {
+      margin-top: 25px;
+      background-color: #e5007e;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(229,0,126,0.6);
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    form button:hover,
+    form button:focus {
+      background-color: #bf0068;
+      outline: none;
+    }
+    .contact-info {
+      margin-top: 35px;
+      color: #444;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+      user-select: none;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      header {
+        padding: 20px 30px;
+      }
+      nav ul {
+        gap: 20px;
+      }
+      section.contact-container {
+        padding: 25px 30px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+      }
+      nav ul {
+        gap: 18px;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      section.contact-container {
+        padding: 25px 20px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      header .logo {
+        font-size: 1.5rem;
+      }
+      nav ul li {
+        font-size: 0.9rem;
+      }
+      section.contact-container {
+        padding: 20px 15px;
+      }
+      h1 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+      }
+      form input, form textarea {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+      }
+      form button {
+        font-size: 1rem;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Vishal Mega Mart Bharti</div>
+    <nav aria-label="Primary Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Apply</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="marquee-container" aria-label="Important Announcement">
+    <marquee behavior="scroll" direction="left" scrollamount="8" style="color: #e5007e; font-weight: 700;">
+      Vishal Mega Mart Security Guard Bharti 2025 - Apply Now! Visit the Home or About page for details.
+    </marquee>
+  </div>
+
+  <h1>Contact Us - Vishal Mega Mart Security Guard Bharti</h1>
+
+  <section class="contact-container" role="region" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Get in Touch</h2>
+
+    <form id="contactForm" aria-describedby="form-description" novalidate>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
+
+      <label for="phone">Mobile Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit" aria-label="Send your message">Send Message</button>
+    </form>
+
+    <div class="contact-info" aria-live="polite" aria-atomic="true" aria-relevant="additions" style="margin-top: 2rem;">
+      <p><strong>Office Address:</strong> Vishal Mega Mart HQ, 123 Market Road, City, State, 123456</p>
+      <p><strong>Phone:</strong> +91-9876543210</p>
+      <p><strong>Email:</strong> support@vishalmegamart.com</p>
+    </div>
+  </section>
+
+  <script>
+    // Basic form validation
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        alert('Please fill out the form correctly.');
+        return;
+      }
+      alert('Thank you for contacting us, we will get back to you soon!');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

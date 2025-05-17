@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Vishal Mega Mart Security Guard Bharti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Base & Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: linear-gradient(-45deg, #e5007e, #ff6f61, #3a86ff, #8338ec);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px 40px;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    header .logo {
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: white;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(229,0,126,0.9);
+      cursor: default;
+      user-select: none;
+      flex: 1 1 200px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex: 2 1 400px;
+    }
+    nav ul li {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      display: inline-block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: rgba(229,0,126,0.8);
+      box-shadow: 0 0 8px rgba(229,0,126,0.9);
+      color: white;
+    }
+
+    /* MAIN CONTENT */
+    h1 {
+      color: white;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(229, 0, 126, 0.7);
+      user-select: none;
+      max-width: 100%;
+      padding: 0 10px;
+    }
+    section.about-container {
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      max-width: 700px;
+      width: 100%;
+      padding: 30px 40px;
+      color: #444;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      box-sizing: border-box;
+      user-select: text;
+    }
+    section.about-container p {
+      margin-bottom: 20px;
+    }
+    section.about-container strong {
+      color: #e5007e;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 900px) {
+      header {
+        padding: 20px 30px;
+      }
+      nav ul {
+        gap: 20px;
+      }
+      section.about-container {
+        padding: 25px 30px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+      }
+      nav ul {
+        gap: 18px;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      section.about-container {
+        padding: 25px 20px;
+        font-size: 1.05rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      header .logo {
+        font-size: 1.5rem;
+      }
+      nav ul li {
+        font-size: 0.9rem;
+      }
+      section.about-container {
+        padding: 20px 15px;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      h1 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Vishal Mega Mart Bharti</div>
+    <nav aria-label="Primary Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
+        <li><a href="index.html">Apply</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>About Vishal Mega Mart Security Guard Bharti</h1>
+
+  <section class="about-container" role="main" aria-labelledby="about-title">
+    <p><strong>Vishal Mega Mart Bharti</strong> is committed to providing top-notch security guard recruitment services for Vishal Mega Mart stores across the country. Our mission is to ensure safety, reliability, and professionalism in every placement.</p>
+
+    <p>With years of experience in the security industry, we understand the importance of deploying well-trained and trustworthy personnel to safeguard assets and maintain a secure environment for both customers and employees.</p>
+
+    <p>Our recruitment process focuses on thorough background checks, rigorous training, and continuous monitoring to maintain the highest standards of security. We work closely with Vishal Mega Mart management to tailor our services to their unique requirements.</p>
+
+    <p>We believe in transparency, efficiency, and customer satisfaction. Our dedicated team is always available to address queries and support both clients and candidates throughout the recruitment process.</p>
+
+    <p>Thank you for considering <strong>Vishal Mega Mart Bharti</strong> as your trusted partner in security guard recruitment.</p>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vishal Mega Mart Security Guard Bharti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      /* Cool animated gradient background */
+      background: linear-gradient(-45deg, #e5007e, #ff6f61, #3a86ff, #8338ec);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+#breaking-news {
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+/* Use a wider span for continuous scroll, no big gap */
+#breaking-news span {
+  display: inline-block;
+  padding-left: 100%; /* space before start */
+  animation: marquee 20s linear infinite; /* slower scroll */
+}
+
+/* Smooth linear animation moving fully from right to left */
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    header {
+      background-color: rgba(229, 0, 126, 0.9);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 15px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header img {
+      height: 60px;
+    }
+    header h1 {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      margin: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd6e8;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.9);
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+    h2 {
+      color: #e5007e;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 2rem;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    form input:focus, form select:focus, form textarea:focus {
+      border-color: #e5007e;
+      outline: none;
+    }
+    form button {
+      background-color: #e5007e;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      font-weight: 700;
+    }
+    form button:hover {
+      background-color: #bf0068;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      margin-top: auto;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+    }
+
+    /* Eligibility toggle button */
+    #toggleEligibilityBtn {
+      display: block;
+      background-color: #e5007e;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px auto;
+      max-width: 300px;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(229, 0, 126, 0.6);
+      transition: background 0.3s ease;
+    }
+    #toggleEligibilityBtn:hover {
+      background-color: #bf0068;
+    }
+
+    /* Hide eligibility section initially */
+    #eligibility {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+      margin: 0 auto 40px auto;
+      max-width: 700px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      padding: 0 20px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    #eligibility.show {
+      max-height: 500px; /* enough height for content */
+      opacity: 1;
+      padding: 40px 20px;
+      margin-bottom: 40px;
+    }
+    #eligibility ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    #eligibility ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav a {
+        margin: 8px 12px;
+      }
+      #toggleEligibilityBtn {
+        width: 90%;
+        max-width: none;
+      }
+      section {
+        width: 90%;
+        margin: 30px auto;
+      }
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Breaking News Bar -->
+  <div id="breaking-news" aria-live="polite" aria-atomic="true" role="marquee">
+  <span>
+    आ गया आ गया! Vishal Mega Mart में Security Guard की Bharti आ गया! आवेदन करें अभी! &nbsp;&nbsp;&nbsp; 
+    आ गया आ गया! Vishal Mega Mart में Security Guard की Bharti आ गया! आवेदन करें अभी! &nbsp;&nbsp;&nbsp;
+  </span>
+</div>
+
+
+  <header>
+    <img src="idkvuSvXiV_1747510526562.png" alt="Vishal Mega Mart Logo" />
+    <h1>Security Guard Bharti 2025</h1>
+    <nav>
+    <a href="index.html">Apply</a>
+    <a href="contact.htm">Contact</a>
+    <a href="about.html">About</a>
+  </nav>
+  </header>
+
+  <!-- Toggle button for eligibility -->
+  <button id="toggleEligibilityBtn" aria-expanded="false" aria-controls="eligibility">Show Eligibility Criteria</button>
+
+  <section id="eligibility" aria-hidden="true">
+    <h2>Eligibility Criteria</h2>
+    <ul>
+      <li>Minimum age: 18 years</li>
+      <li>Maximum age: 35 years</li>
+      <li>Minimum qualification: 10th pass</li>
+      <li>Should be physically fit</li>
+      <li>No criminal background</li>
+    </ul>
+  </section>
+
+  <section id="apply">
+    <h2>Apply Now</h2>
+    <form id="applyForm">
+      <input type="text" placeholder="Full Name" required />
+      <input type="number" placeholder="Age" min="18" max="35" required />
+      <input type="text" placeholder="Qualification" required />
+      <input type="text" placeholder="Address" required />
+      <input type="tel" placeholder="Mobile Number" pattern="[0-9]{10}" required />
+      <input type="email" placeholder="Email ID" required />
+      <textarea rows="4" placeholder="Why should we hire you?" required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: hr@vishalmegamart.com</p>
+    <p>Phone: +91-9876543210</p>
+    <p>Address: Vishal Mega Mart HQ, New Delhi, India</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Vishal Mega Mart | All rights reserved.
+  </footer>
+
+  <script>
+    // Toggle Eligibility section visibility
+    const toggleBtn = document.getElementById('toggleEligibilityBtn');
+    const eligibilitySection = document.getElementById('eligibility');
+
+    toggleBtn.addEventListener('click', () => {
+      const isShown = eligibilitySection.classList.toggle('show');
+      toggleBtn.textContent = isShown ? 'Hide Eligibility Criteria' : 'Show Eligibility Criteria';
+      toggleBtn.setAttribute('aria-expanded', isShown);
+      eligibilitySection.setAttribute('aria-hidden', !isShown);
+    });
+
+    // Form submission alert + reset
+    document.getElementById('applyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Your application has been submitted successfully! We will reach you soon... Wait!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
